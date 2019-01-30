@@ -61,7 +61,7 @@ setup(**{'author': 'KPN Digital Team',
                      '\n'
                      '    DATABASES = {\n'
                      "        'default': {\n"
-                     "            'ENGINE': 'de.db.teradata',\n"
+                     "            'ENGINE': 'django_teradata',\n"
                      "            'AUTOCOMMIT': False,\n"
                      "            'NAME': 'database_name',\n"
                      "            'USER': 'database_user',\n"
@@ -72,10 +72,11 @@ setup(**{'author': 'KPN Digital Team',
                      "            'DEFAULT_VERSION': '1.0',\n"
                      "            'CONNECTION_TYPE': 'odbc',\n"
                      "            'ODBC_LIB_PATH': 'path_to_odbc_library',\n"
+                     "            'CHARSET': 'UTF8',\n"
                      '        }\n'
                      '    }\n',
  'name': 'django-teradata',
- 'packages': ['de', 'de.db', 'de.db.teradata'],
+ 'packages': ['django_teradata'],
  'tests_require': ['tox'],
  'url': 'https://github.com/kpn-digital/django-teradata',
  'version': None,

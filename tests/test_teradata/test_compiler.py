@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from de.db.teradata.compiler import SQLCompiler
 from django.db import connection
 from django.db.models.sql.query import Query
 from django.test import TestCase
+from django_teradata.compiler import SQLCompiler
 from tests.models import OrderedSampleModel, SampleModel
 
 

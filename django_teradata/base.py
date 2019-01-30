@@ -52,4 +52,5 @@ class DatabaseWrapper(BaseDatabaseWrapper):
                                 database=settings_dict['NAME'],
                                 username=settings_dict['USER'],
                                 password=settings_dict['PASSWORD'],
-                                DBCName=settings_dict['HOST'])
+                                DBCName=settings_dict['HOST'],
+                                charset=settings_dict['CHARSET'])

@@ -33,7 +33,6 @@ venv:
 	@$(PIP) install -U "pip>=7.0" -q
 	@$(PIP) install -r $(DEPS)
 
-
 test: clean tox
 
 test/%: venv pyclean

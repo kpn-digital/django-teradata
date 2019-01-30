@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from de.db.teradata.operations import DatabaseOperations
 from django.db import connection
 from django.test import TestCase
+from django_teradata.operations import DatabaseOperations
 
 
 class TestsDatabaseOperations(TestCase):

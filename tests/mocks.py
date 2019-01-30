@@ -4,7 +4,7 @@
 class UdaExecConnectionMock:
     def __init__(self, side_effect_commit=None, side_effect_execute=None):
         self.settings_dict = {
-            'ENGINE': 'de.db.teradata',
+            'ENGINE': 'django_teradata',
             'AUTOCOMMIT': False,
             'NAME': 'database',
             'USER': 'username',
@@ -15,6 +15,7 @@ class UdaExecConnectionMock:
             'DEFAULT_VERSION': '',
             'CONNECTION_TYPE': 'odbc',
             'ODBC_LIB_PATH': '',
+            'CHARSET': 'UTF8',
         }
         self.side_effect_commit = side_effect_commit
         self.side_effect_execute = side_effect_execute

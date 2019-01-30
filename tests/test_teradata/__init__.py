@@ -14,7 +14,7 @@ settings.configure(
     },
     MIDDLEWARE_CLASSES=global_settings.MIDDLEWARE_CLASSES,
     ROOT_URLCONF=None,
-    INSTALLED_APPS=['de.db.teradata'],
+    INSTALLED_APPS=['django_teradata'],
 )
 if hasattr(django, 'setup'):
     django.setup()

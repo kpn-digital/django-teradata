@@ -34,7 +34,7 @@ Add to your `settings.py` file.
 
     DATABASES = {
         'default': {
-            'ENGINE': 'de.db.teradata',
+            'ENGINE': 'django_teradata',
             'AUTOCOMMIT': False,
             'NAME': 'database_name',
             'USER': 'database_user',
@@ -45,5 +45,6 @@ Add to your `settings.py` file.
             'DEFAULT_VERSION': '1.0',
             'CONNECTION_TYPE': 'odbc',
             'ODBC_LIB_PATH': 'path_to_odbc_library',
+            'CHARSET': 'UTF8',
         }
     }

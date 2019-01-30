@@ -3,10 +3,10 @@
 from unittest import skip
 
 import mock
-from de.db.teradata.base import DatabaseWrapper
 from django.db import connection
 from django.db.backends.utils import CursorWrapper
 from django.test import TestCase
+from django_teradata.base import DatabaseWrapper
 from tests.mocks import UdaExecConnectionMock
 
 
@@ -18,7 +18,7 @@ class TestsDatabaseWrapper(TestCase):
 
     def settings_dict(self):
         return {
-            'ENGINE': 'de.db.teradata',
+            'ENGINE': 'django_teradata',
             'AUTOCOMMIT': False,
             'NAME': 'database',
             'USER': 'username',
@@ -29,6 +29,7 @@ class TestsDatabaseWrapper(TestCase):
             'DEFAULT_VERSION': '',
             'CONNECTION_TYPE': 'odbc',
             'ODBC_LIB_PATH': '',
+            'CHARSET': 'UTF8',
         }
 
     def test_set_autocommit(self):
@@ -48,7 +49,7 @@ class TestsDatabaseWrapper(TestCase):
         assert isinstance(cursor, CursorWrapper) is True
 
     def test_get_new_connection(self):
-        with mock.patch('de.db.teradata.base.Database.UdaExec') as uda_exec_mock:
+        with mock.patch('django_teradata.base.Database.UdaExec') as uda_exec_mock:
             connection_mock = UdaExecConnectionMock()
             uda_exec_mock.return_value = connection_mock
             self.database.get_new_connection({})

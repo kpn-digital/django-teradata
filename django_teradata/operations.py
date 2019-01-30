@@ -4,7 +4,7 @@ from django.db.backends.base.operations import BaseDatabaseOperations
 
 
 class DatabaseOperations(BaseDatabaseOperations):
-    compiler_module = 'de.db.teradata.compiler'
+    compiler_module = 'django_teradata.compiler'
 
     def quote_name(self, name):
         if name.startswith('"') and name.endswith('"'):
